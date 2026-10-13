@@ -11,5 +11,6 @@ Panorama is a scrolling window overview and switcher, not a window manager. Neve
 - Bound frame queues and memory. Use display-linked animation. Do not route video buffers through SwiftUI observable state.
 - Test meaningful geometry, input, lifecycle and performance behavior. Use `swift test` and `./script/build_and_run.sh --verify`.
 - Use `VERSION` as the SemVer source. Each distributed version needs a GitHub Release. Never commit update-signing private keys or credentials.
+- Release publication requires the user to verify the app and explicitly request a release. Until then, do not create GitHub Releases, push release tags, or run `script/publish_release.sh`. Repository setup and build authorization are not release authorization.
 - Mockups are references, not pixel-perfect acceptance targets. Actual app behavior and measured smoothness decide the details.
 - Do not claim physical gestures, permissions, live captures or update installation work unless actually verified. Document remaining checks.

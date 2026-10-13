@@ -1,6 +1,6 @@
 {
-  "repository": "",
-  "feedURL": "",
+  "repository": "farhan2077/panorama",
+  "feedURL": "https://github.com/farhan2077/panorama/releases/latest/download/appcast.xml",
   "publicEDKey": "0OanKZGuBmvQIEpzDA00WzG5ZqLJ7DxonJjcJlerurk=",
   "keychainAccount": "panorama-updates"
 }

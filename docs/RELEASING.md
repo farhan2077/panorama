@@ -1,6 +1,12 @@
 # Releasing Panorama
 
+## Approval required
+
+The user will verify the app before authorizing a release. Do not create GitHub Releases, push release tags, or run `script/publish_release.sh` until the user explicitly requests a release. Local builds and repository configuration do not authorize publication.
+
 ## Configure once
+
+Panorama is configured for a future public feed at `https://github.com/farhan2077/panorama/releases/latest/download/appcast.xml`. The repository remains private until the user changes it. Update checks cannot succeed until the repository is public and an explicitly approved release contains the appcast and archive.
 
 Set `repository` to `owner/repo` in `release.json`. For a public GitHub repository, use `https://github.com/owner/repo/releases/latest/download/appcast.xml` as `feedURL`. `publicEDKey` must match the private key in Keychain under the configured `keychainAccount` (currently `panorama-updates`). Public keys can be committed; private keys must never be committed. Back up the private key securely before relying on the updater.
 
