@@ -1,0 +1,10 @@
+.build/
+dist/
+.DS_Store
+*.xcuserstate
+.env
+*.pem
+*.p12
+*.key
+__pycache__/
+*.pyc

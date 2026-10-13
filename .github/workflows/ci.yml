@@ -1,0 +1,19 @@
+name: Build and test
+on:
+  push:
+  pull_request:
+permissions:
+  contents: read
+jobs:
+  macos:
+    runs-on: macos-26
+    steps:
+      - uses: actions/checkout@v4
+      - name: Select Xcode
+        run: sudo xcode-select -s /Applications/Xcode.app
+      - name: Test core behavior
+        run: swift test
+      - name: Build app bundle
+        run: ./script/build_and_run.sh --build-only
+      - name: Verify bundle
+        run: codesign --verify --deep --strict dist/Panorama.app
